@@ -26,7 +26,23 @@ end
 
 	nvim_lsp.tsserver.setup {
 		on_attach = on_attach,
-		filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript" }
+		filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript" },
+		cmd = { "typescript-language-server", "--stdio" }
+	}
+
+      nvim_lsp.sumneko_lua.setup {
+	on_attach = on_attach,
+	settings = {
+	  Lua = {
+	    diagnostics = {
+	      globals = { 'vim' }
+	      }
+	    },
+
+	    workspace = {
+	      library = vim.api.nvim_get_runtime_file("", true)
+	      }
+	  }
 	}
 
 EOF
