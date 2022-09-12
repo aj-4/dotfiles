@@ -3,6 +3,16 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
+set nowrap
+
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
 
 if has("nvim")
 	let g:plug_home = stdpath('data') . 'plugged'

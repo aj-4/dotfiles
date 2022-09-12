@@ -42,14 +42,14 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';f',
+vim.keymap.set('n', ';p',
   function()
     builtin.find_files({
       no_ignore = false,
       hidden = false
     })
   end)
-vim.keymap.set('n', ';p', function()
+vim.keymap.set('n', ';f', function()
   builtin.live_grep()
 end)
 vim.keymap.set('n', '\\\\', function()
