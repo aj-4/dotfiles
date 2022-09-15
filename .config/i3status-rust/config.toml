@@ -1,10 +1,13 @@
 theme = "gruvbox-dark"
-icons = "awesome"
+icons = "material-nf"
+
+[[block]]
+block = "speedtest"
+format = "{speed_down}"
 
 [[block]]
 block = "disk_space"
-path = "/"
-alias = "/"
+path = "/home"
 info_type = "free"
 format = "{icon} {available} free / {total}"
 unit = "GB"
@@ -19,11 +22,7 @@ block = "backlight"
 block = "sound"
 
 [[block]]
-block = "speedtest"
-
-[[block]]
 block = "battery"
-format = "{percentage} {time}"
 
 [[block]]
 block = "pacman"
