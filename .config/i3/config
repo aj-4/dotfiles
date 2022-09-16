@@ -183,6 +183,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   status_command i3status-rs 
+  position top
   font xft: Hack Nerd Font, FontAwesome 12
   }
 

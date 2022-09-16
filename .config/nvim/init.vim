@@ -23,6 +23,7 @@ call plug#begin()
 	Plug 'sainnhe/everforest'
 	Plug 'tpope/vim-fugitive'
 	Plug 'cohama/lexima.vim'
+  Plug 'tpope/vim-surround'
 
 	if has("nvim")
 		Plug 'neovim/nvim-lspconfig'

@@ -6,10 +6,15 @@ block = "speedtest"
 format = "{speed_down}"
 
 [[block]]
+block = "cpu"
+interval = 1
+format = "{utilization}"
+
+[[block]]
 block = "disk_space"
 path = "/home"
 info_type = "free"
-format = "{icon} {available} free / {total}"
+format = "{icon} {available}"
 unit = "GB"
 interval = 20
 warning = 20.0
