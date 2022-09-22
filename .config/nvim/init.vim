@@ -14,6 +14,9 @@ cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 
+nnoremap tn :tabedit<CR>
+nnoremap tc :tabclose<CR>
+
 if has("nvim")
 	let g:plug_home = stdpath('data') . 'plugged'
 endif
@@ -47,6 +50,9 @@ call plug#begin()
 		Plug 'windwp/nvim-ts-autotag'
 		Plug 'windwp/nvim-autopairs'
 		Plug 'lewis6991/gitsigns.nvim'
+
+    Plug 'akinsho/bufferline.nvim'
+
 	endif
 
 call plug#end()
@@ -57,6 +63,7 @@ if has('termguicolors')
 endif
 
 set background=dark
-let g:everforest_background = 'hard'
-let g:everforest_better_performance = 1
+let g:everforest_background='hard'
+let g:everforest_ui_contrast='high'
+let g:everforest_transparent_background=1
 colorscheme everforest
