@@ -4,6 +4,9 @@ set shiftwidth=2
 set autoindent
 set smartindent
 set nowrap
+set ignorecase
+set smartcase
+set number
 
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
@@ -16,6 +19,7 @@ cnoremap <C-l> <Right>
 
 nnoremap tn :tabedit<CR>
 nnoremap tc :tabclose<CR>
+nnoremap tt :NvimTreeToggle<CR>
 
 if has("nvim")
 	let g:plug_home = stdpath('data') . 'plugged'
@@ -47,11 +51,13 @@ call plug#begin()
 		Plug 'kyazdani42/nvim-web-devicons'
 		Plug 'nvim-lualine/lualine.nvim'
 
-		Plug 'windwp/nvim-ts-autotag'
-		Plug 'windwp/nvim-autopairs'
+	  Plug 'windwp/nvim-ts-autotag'
+  	Plug 'windwp/nvim-autopairs'
 		Plug 'lewis6991/gitsigns.nvim'
 
     Plug 'akinsho/bufferline.nvim'
+
+    Plug 'kyazdani42/nvim-tree.lua'
 
 	endif
 

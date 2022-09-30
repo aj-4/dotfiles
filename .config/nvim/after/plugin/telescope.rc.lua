@@ -21,7 +21,7 @@ telescope.setup {
     file_browser = {
       theme = "dropdown",
       -- disables netrw and use telescope-file-browser in its place
-      hijack_netrw = true,
+      -- hijack_netrw = true,
       mappings = {
         -- your custom insert mode mappings
         ["i"] = {
@@ -42,14 +42,14 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';p',
+vim.keymap.set('n', ';f',
   function()
     builtin.find_files({
       no_ignore = false,
       hidden = false
     })
   end)
-vim.keymap.set('n', ';f', function()
+vim.keymap.set('n', ';g', function()
   builtin.live_grep()
 end)
 vim.keymap.set('n', '\\\\', function()
