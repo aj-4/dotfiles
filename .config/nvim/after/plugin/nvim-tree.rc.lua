@@ -10,6 +10,7 @@ require("nvim-tree").setup()
 -- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  respect_buf_cwd = true,
   view = {
     adaptive_size = true,
     mappings = {
@@ -20,8 +21,23 @@ require("nvim-tree").setup({
   },
   renderer = {
     group_empty = true,
+    highlight_opened_files = "all",
   },
   filters = {
     dotfiles = true,
+  },
+  git = {
+    enable = true,
+    show_on_dirs = true,
+  },
+  update_focused_file = {
+    enable = true,
+    update_root = false,
+    ignore_list = {},
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
   },
 })
