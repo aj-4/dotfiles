@@ -1,0 +1,23 @@
+# general settings
+auto-reload yes
+reload-time 1
+max-items 50
+
+# unbind keys
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key o open
+bind-key q quit
+
+# solarized
+
+# highlights
+highlight article "^(Title):.*$" blue default
+highlight article "https?://[^ ]+" red default
+highlight article "\\[image\\ [0-9]+\\]" green default

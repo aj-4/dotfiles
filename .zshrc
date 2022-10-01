@@ -21,5 +21,5 @@ alias gp='git push'
 alias vim=nvim
 alias rainbowstream='source $HOME/venv/bin/activate && rainbowstream'
 
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x70000002A}]}'
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x70000002A}]}' > /dev/null
 
